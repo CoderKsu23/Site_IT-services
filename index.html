@@ -3,186 +3,177 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>lan8.ru</title>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+	<script src="main.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
+	<title>Управление рисками IT-проекта</title>
 </head>
 <body>
 	<header class="header">
-		<div class="main_nav">
-		<div><a href="#" class="main_page">L8</a></div>
-			<ul class="links">
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Кейсы</a></li>
-				<li><a href="#">Блог</a></li>
-			    <li><a href="#">Вакансии</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<div class="number">
-				<p>+7 495 128 83 83</p>
+		<div class="container">
+			<div class="header_inner">
+				<a class="logo" href="#" >L8</a>
+				<nav class="main_nav">
+					<ul class="nav_bar_list">
+						<li><a class="nav_bar_link" href="#">О компании</a></li>
+						<li><a class="nav_bar_link" href="#">Услуги</a></li>
+						<li><a class="nav_bar_link" href="#">Кейсы</a></li>
+						<li><a class="nav_bar_link" href="#">Блог</a></li>
+						<li><a class="nav_bar_link" href="#">Вакансии</a></li>
+						<li><a class="nav_bar_link" href="#">Контакты</a></li>
+					</ul>
+					<div class="menu_btn">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					<div class="dropdown_menu">
+						<ul>
+						<li class="dropdown_menu_links"><a href="#">О компании</a></li>
+						<li class="dropdown_menu_links"><a href="#">Услуги</a></li>
+						<li class="dropdown_menu_links"><a href="#">Кейсы</a></li>
+						<li class="dropdown_menu_links"><a href="#">Блог</a></li>
+						<li class="dropdown_menu_links"><a href="#">Вакансии</a></li>
+						<li class="dropdown_menu_links"><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="number">
+					<p>+7 495 128 83 83</p>
 				</div>
-			<div class="menu_btn">
-				<i class="fa-solid fa-bars"></i>
-			</div>
-			<div class="dropdown_menu">
-				<ul>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Кейсы</a></li>
-				<li><a href="#">Блог</a></li>
-			    <li><a href="#">Вакансии</a></li>
-				<li><a href="#">Контакты</a></li>
-				</ul>
 			</div>
 		</div>
-		<script>
-			const menuBtn = document.querySelector('.menu_btn');
-			const menuBtnIcon = document.querySelector('.menu_btn i');
-			const downMenu = document.querySelector('.dropdown_menu');
-
-			menuBtn.onclick = function () {
-				downMenu.classList.toggle('open');
-
-				const isOpen = downMenu.classList.contains('open')
-				menuBtnIcon.classList = isOpen ?
-				'fa-solid fa-xmark' :
-				'fa-solid fa-bars'
-		}
-		</script>
 	</header>
-		<section>
+	<section>
 		<div class="container">
 			<h3 class="header_part">Услуга</h3>
 			<h1 class="header_title">Управление рисками<br> IT-проекта</h1>
-			<button type="button" class="header_btn">Обсудить проект</button>
+			<button type="button" class="btn header_btn">Обсудить проект</button>
 			<p class="header_text">Проактивная идентификация, анализ и контроль угроз для  успешной реализации ваших цифровых инициатив. Гарантируем предсказуемость сроков, бюджета и качества.</p>
 		</div>
-	    </section>
-		<section class="services">
-			<div class="container">
-				<div class="block">
-				<h2 class="title_services">Проффессиональное управление рисками в IT-проектах</h2>
+	</section>
+	<section class="services">
+		<div class="container">
+			<div class="block">
+				<h2 class="section_title">Проффессиональное управление рисками в IT-проектах</h2>
 				<p class="text_services">Компания <b>L8</b> обеспечивает полный цикл <b>управления рисками IT-проектов</b>. Наши эксперты используют проверенные методики (PMBOK, ISO 31000) для проактивного выявления угроз проекту по срокам, бюджету и качеству. Мы помогаем внедрить план реагирования, что минимизирует негативные последствия и защищает ваши инвестиции в цифровизацию. Доверте <b>управление рисками IT-проекта</b> профессионалам.</p>
+			</div>
+			<div class="block_items">
+				<div class="services_item">
+					<img class="services_item_img" src="img/magnifying-glass-solid.svg" alt="Идентификация" >
+					<h3 class="services_item_title">Идентификация</h3>
+					<p class="services_item_text">Системный поиск и документирование всех потенциальных угроз для вашего IT-проекта.</p>
 				</div>
-				<div class="block_items">
-					<div class="services_item">
-						<img class="services_item_img" src="img/magnifying-glass-solid.svg" alt="Идентификация" >
-						<h3 class="services_item_title">Идентификация</h3>
-						<p class="services_item_text">Системный поиск и документирование всех потенциальных угроз для вашего IT-проекта.</p>
-					</div>
-					<div class="services_item">
-						<img class="services_item_img" src="img/chart-column-solid.svg" alt="Анализ и приоритизация" >
-						<h3 class="services_item_title">Анализ и приоритизация</h3>
-						<p class="services_item_text">Оценка вероятности и impact рисков для фокусировки на наиболее критичных.</p>
-					</div>
-					<div class="services_item">
-						<img class="services_item_img" src="img/shield-halved-solid.svg" alt="Планирование реагирования" >
-						<h3 class="services_item_title">Планирование реагирования</h3>
-						<p class="services_item_text">Разработка стратегий: избегание, снижение, принятие или передача рисков.</p>
-					</div>
-					<div class="services_item">
-						<img class="services_item_img" src="img/chart-line-solid.svg" alt="Мониторинг и контроль" >
-						<h3 class="services_item_title">Мониторинг и контроль</h3>
-						<p class="services_item_text">Постоянный контроль заявленных рисков и выявление новых на протяжении всего жизненного цикла проекта.</p>
-					</div>
+				<div class="services_item">
+					<img class="services_item_img" src="img/chart-column-solid.svg" alt="Анализ и приоритизация" >
+					<h3 class="services_item_title">Анализ и приоритизация</h3>
+					<p class="services_item_text">Оценка вероятности и impact рисков для фокусировки на наиболее критичных.</p>
+				</div>
+				<div class="services_item">
+					<img class="services_item_img" src="img/shield-halved-solid.svg" alt="Планирование реагирования" >
+					<h3 class="services_item_title">Планирование реагирования</h3>
+					<p class="services_item_text">Разработка стратегий: избегание, снижение, принятие или передача рисков.</p>
+				</div>
+				<div class="services_item">
+					<img class="services_item_img" src="img/chart-line-solid.svg" alt="Мониторинг и контроль" >
+					<h3 class="services_item_title">Мониторинг и контроль</h3>
+					<p class="services_item_text">Постоянный контроль заявленных рисков и выявление новых на протяжении всего жизненного цикла проекта.</p>
 				</div>
 			</div>
-		</section>
-		<section class="risks">
-			<div class="container">
-			    <h2 class="header_risks">Какие риски мы управляем в IT-проектах?</h2>
-				<div class="block_risks">
-					<div class="list_risks">
-						<ul>
-							<li><b>Технические риски:</b> Сложность архитектуры, неготовность технологий.</li>
-				            <li><b>Риски менеджмента:</b> Ошибки в планированиии, коммуникациях.</li>
-				            <li><b>Организационные риски:</b> Нехватка ресурсов, сопротивление изменениям.</li>
-                        </ul>
-				    </div>
-				    <div class="list_risks">
-					    <ul>
-				            <li><b>Внешние риски:</b> Изменение законодательства, действия поставщиков.</li>
-				            <li><b>Риски требований:</b> Неполные или меняющиеся требования заказчика.</li>
-				            <li><b>Финансовые риски:</b> Превышение бюджета, колебания валютных курсов.</li>
-			            </ul>
-				    </div>
+		</div>
+	</section>
+	<section class="risks">
+		<div class="container">
+			<h2 class="section_title title_risks">Какие риски мы управляем в IT-проектах?</h2>
+			<div class="block_risks">
+				<ul class="list_risks">
+					<li><b>Технические риски:</b> Сложность архитектуры, неготовность технологий.</li>
+					<li><b>Риски менеджмента:</b> Ошибки в планированиии, коммуникациях.</li>
+					<li><b>Организационные риски:</b> Нехватка ресурсов, сопротивление изменениям.</li>
+				</ul>
+				<ul class="list_risks">
+					<li><b>Внешние риски:</b> Изменение законодательства, действия поставщиков.</li>
+					<li><b>Риски требований:</b> Неполные или меняющиеся требования заказчика.</li>
+					<li><b>Финансовые риски:</b> Превышение бюджета, колебания валютных курсов.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="benefits">
+		<div class="container">
+			<h2 class="section_title title_benefits">Преимущества работы с L8</h2>
+			<div class="block_benefits_items">
+			<div class="benefits_item">
+				<h3 class="benefits_title_item">Опыт 15+ лет</h3>
+				<p class="text_benefits">Управляем сложными проектами в банковской retail и industrial сферах.</p>
+			</div>
+			<div class="benefits_item">
+				<h3 class="benefits_title_item">Прозрачность процесса</h3>
+				<p class="text_benefits">Регулярная отчетность и понятный реестр рисков в режиме онлайн.</p>
+			</div>
+			<div class="benefits_item">
+				<h3 class="benefits_title_item">Фокус на бизнес-цели</h3>
+				<p class="text_benefits">Все действия направлены на защиту ключевых целей вашего проекта.</p>
+			</div>
+			<div class="benefits_item">
+				<h3 class="benefits_title_item">Интеграция с управлением проекта</h3>
+				<p class="text_benefits">Управление рисками - неотъемлемая часть общего плана проекта.</p>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="methods">
+		<div class="container">
+				<h2 class="section_title title_methods">Наша методология управления рисками</h2>
+			<div class="block_methods">
+				<div class="methods_item">
+					<img class="methods_item_img" src="img/1-solid.svg" alt="Планирование">
+					<h3 class="methods_title_item">Планирование</h3>
+					<p class="methods_text">Определение подходоов и исоздание реестра рисков для вашего проекта.</p>
 				</div>
-            </div>
-		</section>
-		<section class="benefits">
-			<div class="container">
-					<h2 class="header_benefits">Преимущества работы с L8</h2>
-				<div class="block_benefits_items">
-				<div class="benefits_item">
-					<h3 class="title_benefits">Опыт 15+ лет</h3>
-					<p class="text_benefits">Управляем сложными проектами в банковской retail b industrial сферах.</p>
+				<div class="methods_item">
+					<img class="methods_item_img" src="img/2-solid.svg" alt="Идентификация">
+					<h3 class="methods_title_item">Идентификация</h3>
+					<p class="methods_text">Brainstorming, интервью, анализ документов для выявления угроз.</p>
 				</div>
-				<div class="benefits_item">
-					<h3 class="title_benefits">Прозрачность процесса</h3>
-					<p class="text_benefits">Регулярная отчетность и понятный реестр рисков в режиме онлайн.</p>
+				<div class="methods_item">
+					<img class="methods_item_img" src="img/3-solid.svg" alt="Качественный анализ">
+					<h3 class="methods_title_item">Качественный анализ</h3>
+					<p class="methods_text">Оценка вероятности и влияния, составление карты приоритетов рисков.</p>
 				</div>
-				<div class="benefits_item">
-					<h3 class="title_benefits">Фокус на бизнес-цели</h3>
-					<p class="text_benefits">Все действия направлены на защиту ключевых целей вашего проекта.</p>
+				<div class="methods_item">
+					<img class="methods_item_img" src="img/4-solid.svg" alt="Планирование реагирования">
+					<h3 class="methods_title_item">Планирование реагирования</h3>
+					<p class="methods_text">Разработка конкретных мер для каждого ключевого риска.</p>
 				</div>
-				<div class="benefits_item">
-					<h3 class="title_benefits">Интеграция с управлением проекта</h3>
-					<p class="text_benefits">Управление рисками - неотъемлемая часть общего плана проекта.</p>
-				</div>
+				<div class="methods_item">
+					<img class="methods_item_img" src="img/5-solid.svg" alt="Внедрение и мониторинг">
+					<h3 class="methods_title_item">Внедрение и мониторинг</h3>
+					<p class="methods_text">Реализация планов и постоянный контроль за изменениями.</p>
 				</div>
 			</div>
-		</section>
-		<section class="methods">
-			<div class="container">
-					<h2 class="header_methods">Наша методология управления рисками</h2>
-				<div class="block_methods">
-					<div class="methods_item">
-						<img class="methods_item_img" src="img/1-solid.svg" alt="Планирование">
-						<h3 class="methods_title">Планирование</h3>
-						<p class="methods_text">Определение подходоов и исоздание реестра рисков для вашего проекта.</p>
-					</div>
-					<div class="methods_item">
-						<img class="methods_item_img" src="img/2-solid.svg" alt="Идентификация">
-						<h3 class="methods_title">Идентификация</h3>
-						<p class="methods_text">Brainstorming, интервью, анализ документов для выявления угроз.</p>
-					</div>
-					<div class="methods_item">
-						<img class="methods_item_img" src="img/3-solid.svg" alt="Качественный анализ">
-						<h3 class="methods_title">Качественный анализ</h3>
-						<p class="methods_text">Оценка вероятности и влияния, составление карты приоритетов рисков.</p>
-					</div>
-					<div class="methods_item">
-						<img class="methods_item_img" src="img/4-solid.svg" alt="Планирование реагирования">
-						<h3 class="methods_title">Планирование реагирования</h3>
-						<p class="methods_text">Разработка конкретных мер для каждого ключевого риска.</p>
-					</div>
-					<div class="methods_item">
-					    <img class="methods_item_img" src="img/5-solid.svg" alt="Внедрение и мониторинг">
-						<h3 class="methods_title">Внедрение и мониторинг</h3>
-						<p class="methods_text">Реализация планов и постоянный контроль за изменениями.</p>
-					</div>
-				</div>
+		</div>
+	</section>
+	<section class="questions">
+		<div class="container">
+			<h2 class="section_title title_questions">Частые вопросы по управлению рисками IT-проектов</h2>
+			<div class="block_questions">
+				<h3 class="title_question_item">Чем управление рисками в IT-проектах отличается от обычного?</h3>
+				<p class="text_question">IT-проекты имеют высокую степень неопределенности из-за быстро меняющихся технологий и требований. Мы фокусируемся на специфических технических, интеграционных и кадровых рисках, характерных для сферы информационных технологий.</p>
 			</div>
-		</section>
-		<section class="questions">
-					<h2 class="header_questions">Частые вопросы по управлению рисками IT-проектов</h2>
-				<div class="block_questions">
-					<h3 class="title_question">Чем управление рисками в IT-проектах отличается от обычного?</h3>
-					<p class="text_question">IT-проекты имеют высокую степень неопределенности из-за быстро меняющихся технологий и требований. Мы фокусируемся на специфических технических, интеграционных и кадровых рисках, характерных для сферы информационных технологий.</p>
-				</div>
-				<div class="block_questions">
-					<h3 class="title_question">На каком этапе проектанужно начинать управление рисками?</h3>
-					<p class="text_question">Чем раньше, тем лучше. Идеально - на этапе инициации. Однако внедрить процесс управления рисками можно на любой стадии, чтобы минимизировать будущие потери.</p>
-				</div>
-				<div class="block_questions">
-					<h3 class="title_question">Можно ли заказать только аудит рисков, без дальнейшего сопровождения?</h3>
-					<p class="text_question">Да. Мы предлагаем услугу разового аудита и построения реестра рисков с рекомендациями. Вы можете реализовать план реагирования своими силами.</p>
-				</div>
-		</section>
-		<section class="form">
+			<div class="block_questions">
+				<h3 class="title_question_item">На каком этапе проектанужно начинать управление рисками?</h3>
+				<p class="text_question">Чем раньше, тем лучше. Идеально - на этапе инициации. Однако внедрить процесс управления рисками можно на любой стадии, чтобы минимизировать будущие потери.</p>
+			</div>
+			<div class="block_questions">
+				<h3 class="title_question_item">Можно ли заказать только аудит рисков, без дальнейшего сопровождения?</h3>
+				<p class="text_question">Да. Мы предлагаем услугу разового аудита и построения реестра рисков с рекомендациями. Вы можете реализовать план реагирования своими силами.</p>
+			</div>
+		</div>
+	</section>
+	<section class="form">
+		<div class="container">
 			<div class="container_form">
 				<div class="block_support_title">
 					<h2 class="support_title">Нужна поддержка или консультация по <span class="symbols">&lt;/</span>IT-инфраструктуре?<span class="symbols">&gt;</span></h2>
@@ -204,7 +195,7 @@
 						<input class="input_subject" type="text" id="task" placeholder="Кратко опишите свою задачу">
 						</div>
 						<div>
-						<input class="input_btn" type="submit" value="Отправить">
+						<input class="btn input_btn" type="submit" value="Отправить">
 						</div>
 					</form>
 					<p class="form_text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки персональных данных</p>
@@ -213,93 +204,84 @@
 					<a href="#">info@lan8.ru</a>
 					<a href="#">+7 495 128 83 83</a>
 					</div>
-			</div>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script>
-  const input = document.querySelector("#phone");
-  const iti = window.intlTelInput(input, {
-    preferredCountries: ["ru", "us", "gb"],
-    separateDialCode: true, 
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-  });
-</script>
-		</section>
-		<footer class="footer">
+				</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
 			<div class="container_footer">
 				<div class="block_footer_copyright">
 					<h2 class="footer_title">L8</h2>
-					<p class="requisites">Общество с ограниченной<br> ответственностью «ЛАНЭЙТ»<br>ИНН: 7714887920</p>
+					<div class="requisites">
+						<p>Общество с ограниченной ответственностью «ЛАНЭЙТ»</p>
+						<p>ИНН: 7714887920</p>
+					</div>
 					<p class="footer_copyright_text">&copy;2025 - L8</p>
 				</div>
-				<div class="footer_services">
-					<h2 class="footer_title">Услуги</h2>
-					<div>
-						<ul class="footer_links">
-						<li><a href="#">Аутсорсинг технической поддержки</a></li>
-						<li><a href="#">Администрирование ИТ-инфраструктуры и систем</a></li>
-						<li><a href="#">Управление проектами в области IT</a></li>
-						<li><a href="#">Аудит Wi-Fi сетей (Ekahau)</a></li>
-						<li><a href="#">IT-аудит</a></li>
-						<li><a href="#">Услуги по 1C</a></li>
-						<li><a href="#">Комплексные AV-решения</a></li>
-						<li><a href="#">Импортозамещение IT-решений</a></li>
-						<li><a href="#">ИТ-менеджмент (vCIO)</a></li>
-						<li><a href="#">Обучение и повышение IT-грамотности</a></li>
-						<li><a href="#">Обслуживание офисной техники и оборудования</a></li>
-						<li><a href="#">Контроль сотрудников (DLP, мониторинг)</a></li>
-						<li><a href="#">IP-видеонаблюдение и СКУД</a></li>
-						<li><a href="#">Проектирование и монтаж СКС</a></li>
-						<li><a href="#">Системы конфиренц-связи и видеокоммуникаций</a></li>
-						<li><a href="#">Комплаенс и соответствие требованиям регуляторов</a></li>
-						<li><a href="#">Кибербезопасность и защита информации</a></li>
-						<li><a href="#">Автоматизация бизнес-процессов и аналитика</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer_company">
-					<h2 class="footer_title">Компания</h2>
-					<div>
-						<ul class="footer_links">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Кейсы</a></li>
-						<li><a href="#">Вакансии</a></li>
-						<li><a href="#">Контакты</a></li>
-						<li><a href="#">Блог</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer_contacts">
-					<ul class="footer_number footer_links">
-						<li><a href="#">info@lan8.ru</a></li>
-						<li><a href="#">+7 495 128 83 83</a></li>
+					<ul class="footer_list_service">
+						<li><h2 class="footer_title">Услуги</h2></li>
+						<li><a class="footer_link" href="#">Аутсорсинг технической поддержки</a></li>
+						<li><a class="footer_link" href="#">Администрирование ИТ-инфраструктуры и систем</a></li>
+						<li><a class="footer_link" href="#">Управление проектами в области IT</a></li>
+						<li><a class="footer_link" href="#">Аудит Wi-Fi сетей (Ekahau)</a></li>
+						<li><a class="footer_link" href="#">IT-аудит</a></li>
+						<li><a class="footer_link" href="#">Услуги по 1C</a></li>
+						<li><a class="footer_link" href="#">Комплексные AV-решения</a></li>
+						<li><a class="footer_link" href="#">Импортозамещение IT-решений</a></li>
+						<li><a class="footer_link" href="#">ИТ-менеджмент (vCIO)</a></li>
+						<li><a class="footer_link" href="#">Обучение и повышение IT-грамотности</a></li>
+						<li><a class="footer_link" href="#">Обслуживание офисной техники и оборудования</a></li>
+						<li><a class="footer_link" href="#">Контроль сотрудников (DLP, мониторинг)</a></li>
+						<li><a class="footer_link" href="#">IP-видеонаблюдение и СКУД</a></li>
+						<li><a class="footer_link" href="#">Проектирование и монтаж СКС</a></li>
+						<li><a class="footer_link" href="#">Системы конфиренц-связи и видеокоммуникаций</a></li>
+						<li><a class="footer_link" href="#">Комплаенс и соответствие требованиям регуляторов</a></li>
+						<li><a class="footer_link" href="#">Кибербезопасность и защита информации</a></li>
+						<li><a class="footer_link" href="#">Автоматизация бизнес-процессов и аналитика</a></li>
 					</ul>
-					<p>Юридический адрес: 143402, Московская<br> область, г. Красногорск, Ильинское шоссе,<br> дом 1А, помещение 9АВ, офис 19</p>
+					<ul class="footer_list">
+						<li><h2 class="footer_title">Компания</h2></li>
+						<li><a class="footer_link" href="#">О нас</a></li>
+						<li><a class="footer_link" href="#">Кейсы</a></li>
+						<li><a class="footer_link" href="#">Вакансии</a></li>
+						<li><a class="footer_link" href="#">Контакты</a></li>
+						<li><a class="footer_link" href="#">Блог</a></li>
+					</ul>
+				<div class="footer_contacts">
+					<ul class="footer_number">
+						<li><a class="footer_link" href="#">info@lan8.ru</a></li>
+						<li><a class="footer_link" href="#">+7 495 128 83 83</a></li>
+					</ul>
+					<div class="footer_address">
+					<p>Юридический адрес: 143402, Московская область, г. Красногорск, Ильинское шоссе, дом 1А, помещение 9АВ, офис 19</p>
+					</div>
 					<div class="socials_news">
 						<p>Следите за новостями:</p>
 						<a href="#" class="social-btn">
-							<i class="fa-brands fa-vk fa-lg" style="color: #20b2aa;"></i>
+							<i class="fa-brands fa-vk fa-lg"></i>
 						</a>
 						<a href="#" class="social-btn">
-							<i class="fa-brands fa-telegram fa-lg" style="color: #20b2aa;"></i>
+							<i class="fa-brands fa-telegram fa-lg"></i>
 						</a>
 						<a href="#" class="social-btn">
-							<i class="fa-brands fa-youtube fa-lg" style="color: #20b2aa;"></i>
+							<i class="fa-brands fa-youtube fa-lg"></i>
 						</a>
 					</div>
 					<h3>Бесплатная линия<br> консультаций 24/7</h3>
 					<div class="footer_btn_block">
-					<button type="button" class="footer_btn">Заказать звонок</button>
+					<button type="button" class="btn footer_btn">Заказать звонок</button>
 					</div>
 					<div class="footer_polit">
-						<ul class="footer_links">
-						<li><a href="#">Карта сайта</a></li>
-						<li><a href="#">Политика конфиденциальности</a></li>
-						<li><a href="#">Согласие на обработку персональных данных</a></li>
-						<li><a href="#">Политика обработки файлов cookie</a></li>
+						<ul class="footer_list">
+							<li><a class="footer_link" href="#">Карта сайта</a></li>
+							<li><a class="footer_link" href="#">Политика конфиденциальности</a></li>
+							<li><a class="footer_link" href="#">Согласие на обработку персональных данных</a></li>
+							<li><a class="footer_link" href="#">Политика обработки файлов cookie</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 </body>
 </html>
