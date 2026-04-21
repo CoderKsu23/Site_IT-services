@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<script src="main.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
     <title>Выезд IT-инженера на объект</title>
 </head>
@@ -79,7 +81,236 @@
 		</section>
 		<section class="service_calculat">
 			<div class="container">
-				
+				<div class="block_service_calculat">
+					<h2 class="service_calculat_title">Рассчитайте стоимость выезда IT-инженера</h2>
+					<div class="wrapper_range">
+						<label class="label_range" for="computers">Количество рабочих мест (компьютеров):</label>
+						<div class="range_tooltip"></div>
+						<input class="input_range" type="range" id="computers" name="computers" min="1" max="100" value="1"/>
+						<div class="wrapper_numbers_range">
+							<p class="numbers_range_text_min">1</p>
+							<p class="numbers_range_text_max">100+</p>
+						</div>
+					</div>
+					<div class="wrapper_range">
+						<label class="label_range" for="servers">Количество серверов:</label>
+						<div class="range_tooltip"></div>
+						<input class="input_range" type="range" id="servers" name="servers" min="0" max="20" value="0"/>
+						<div class="wrapper_numbers_range">
+							<p class="numbers_range_text_min">0</p>
+							<p class="numbers_range_text_max">20+</p>
+						</div>
+					</div>
+					<div class="service_calculat_items">
+						<div class="block_calculat_item">
+							<h4 class="calculat_item_title">Разовый выезд</h4>
+							<p class="calculat_item_price">9 500 &#8381;</p>
+							<ul class="calculat_item_list">
+								<li class="calculat_item">Диагностика на месте</li>
+								<li class="calculat_item">Работа до 4 часов</li>
+								<li class="calculat_item">Отчет о работе</li>
+							</ul>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Заказать</button>
+							</div>
+						</div>
+						<div class="block_calculat_item calculat_items_white">
+							<h4 class="calculat_item_title">Абонентское обслуживание</h4>
+							<p class="calculat_item_price">от 17 000 &#8381;/мес</p>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Выбрать</button>
+							</div>
+						</div>
+						<div class="block_calculat_item">
+							<h4 class="calculat_item_title">Комплексный IT-аутсорсинг</h4>
+							<p class="calculat_item_price">от 32 000 &#8381;/мес</p>
+							<ul class="calculat_item_list">
+								<li class="calculat_item">Полное сопровождение</li>
+								<li class="calculat_item">Круглосуточная поддержка</li>
+								<li class="calculat_item">Стратегическое планирование</li>
+							</ul>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Обсудить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_include">
+			<div class="container">
+				<h2 class="service_title">Что включает выезд IT-инженера</h2>
+				<div class="wrapper_items">
+					<div class="block_include_items">
+						<h4 class="service_item_title_green">Диагностика и ремонт</h4>
+						<ul class="include_items_list">
+							<li class="include_item">Диагностика оборудования</li>
+							<li class="include_item">Ремонт компьютеров и серверов</li>
+							<li class="include_item">Настройка сетевого оборудования</li>
+							<li class="include_item">Устранение неисправностей</li>
+						</ul>
+					</div>
+					<div class="block_include_items">
+						<h4 class="service_item_title_green">Установка и настройка</h4>
+						<ul class="include_items_list">
+							<li class="include_item">Установка ОС и ПО</li>
+							<li class="include_item">Настройка рабочих мест</li>
+							<li class="include_item">Развертывания серверов</li>
+							<li class="include_item">Настройка резервного копирования</li>
+						</ul>
+					</div>
+					<div class="block_include_items">
+						<h4 class="service_item_title_green">Сетевая инфраструктура</h4>
+						<ul class="include_items_list">
+							<li class="include_item">Обслуживание сетевого оборудования</li>
+							<li class="include_item">Настройка Wi-Fi сети</li>
+							<li class="include_item">Оптимизация работы сети</li>
+							<li class="include_item">Монтаж СКС</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_who-fits">
+			<div class="container">
+				<h2 class="service_title">Кому подходит услуга выезда IT-инженера</h2>
+				<div class="wrapper_items">
+					<div class="block_who-fits_item">
+						<h4 class="service_item_title">Малый бизнес</h4>
+						<p class="service_item_text">Офисы до 20 рабочих мест, нуждающиеся в переодическом техническом обслуживании без содержания штатного IT-специалиста.</p>
+					</div>
+					<div class="block_who-fits_item">
+						<h4 class="service_item_title">Средний бизнес</h4>
+						<p class="service_item_text">Компания с 20 до 100 компьютеров, имеющие распределенные офисы или производственные площадки, требующие регулярного обслуживания.</p>
+					</div>
+					<div class="block_who-fits_item">
+						<h4 class="service_item_title">Крупный бизнес</h4>
+						<p class="service_item_text">Предприятия с разветвленной IT-инфраструктурой, филиалами в регионах, требующие комплексноо сопровождения и аварийного выезда.</p>
+					</div>
+					<div class="block_who-fits_item">
+						<h4 class="service_item_title">Производственные компании</h4>
+						<p class="service_item_text">Заводы, склады, производственные площадки с оборудованием, требующим регулярного обслуживания и оперативного реагирования.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_result">
+			<div class="container">
+				<h2 class="service_title">Результат для клиента</h2>
+				<div class="wrapper_result_items">
+					<div class="block_result_item">
+						<h4 class="service_item_title_green">Экономия ресурсов</h4>
+						<p class="service_item_text">Сокращение расходов на содержание штатного IT-специалиста и простоев оборудования.</p>
+					</div>
+					<div class="block_result_item">
+						<h4 class="service_item_title_green">Стабильная работа</h4>
+						<p class="service_item_text">Минимизация простоев и сбоев в работе IT-инфраструктуры, повышение отказоустойчивости.</p>
+					</div>
+					<div class="block_result_item">
+						<h4 class="service_item_title_green">Экспертная поддержка</h4>
+						<p class="service_item_text">
+							Доступ к команде сертифицированных специальстов с опытом работы в различных отраслях.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_advantages">
+			<div class="container">
+				<h2 class="service_title">Преимущества выездного обслуживания от LAN8</h2>
+				<div class="wrapper_service_advantages">
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Быстрое реагирование</h4>
+						<p class="service_item_text">Выезд IT-инженера в течение 2-4 часов в Москве и МО при срочных обращениях.</p>
+					</div>
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Опытные специалисты</h4>
+						<p class="service_item_text">Сертифицированные инженеры с опытом работы от 5 лет в различных отраслях бизнеса.</p>
+					</div>
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Комплексный подход</h4>
+						<p class="service_item_text">Полный цикл работ: от диагностики до рекомендаций по оптимизации IT-инфраструктуры.</p>
+					</div>
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Гарантия качества</h4>
+						<p class="service_item_text">Гарантия на выполненные работы и предоставляемые рекомендации по обслуживанию.</p>
+					</div>
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Прозрачная отчетность</h4>
+						<p class="service_item_text">Детальный отчет о выполненной работе с рекомендациями по предотвращению проблем.</p>
+					</div>
+					<div class="service_advantages_items">
+						<h4 class="service_item_title_green">Гибкие тарифы</h4>
+						<p class="service_item_text">Возможность разового выезда или абонентского обслуживания в зависимости от потребностей.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_projects">
+			<div class="container">
+				<h2 class="service_title">Реализованные проекты по выездному обслуживанию</h2>
+				<div class="wrapper_items">
+					<div class="block_projects_items">
+						<h4 class="service_item_title">Обслуживание сети аптек</h4>
+						<p class="service_item_text">Регулярное обслуживание 35 аптек в Москве и области, включая выезды для настройки оборудования и решения срочных проблем.</p>
+						<a class="projects_item_link" href="#">Подробнее о кейсе &#8594;</a>
+					</div>
+					<div class="block_projects_items">
+						<h4 class="service_item_title">IT-поддержка производственного предприятия</h4>
+						<p class="service_item_text">Выездное обслуживание завода с 200+ компьютерами и промышленным оборудованием, требующим регулярного обслуживания.</p>
+						<a class="projects_item_link" href="#">Подробнее о кейсе &#8594;</a>
+					</div>
+					<div class="block_projects_items">
+						<h4 class="service_item_title">Сопровождение сети офисов</h4>
+						<p class="service_item_text">Комплексное обслуживание 8 офисов финансовой компании с распределенной IT-инфраструктурой и регулярными выездами.</p>
+						<a class="projects_item_link" href="#">Подробнее о кейсе &#8594;</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_associated">
+			<div class="container">
+				<h2 class="service_title">Связанные услуги</h2>
+				<div class="wrapper_items">
+					<div class="block_associated_items">
+						<h4 class="service_item_title_green">Аутсорсинг IT-услуг</h4>
+						<p class="service_item_text">Полное сопровождение IT-инфраструктуры вашей компаниии</p>
+					</div>
+					<div class="block_associated_items">
+						<h4 class="service_item_title_green">Обслуживание серверов</h4>
+						<p class="service_item_text">Настройка, мониторинг и администрирование серверного оборудования</p>
+					</div>
+					<div class="block_associated_items">
+						<h4 class="service_item_title_green">Настройка сетей</h4>
+						<p class="service_item_text">Проектирование, монтаж и настройка локальных сетей</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_questions">
+			<div class="container">
+				<h2 class="service_title">Часто задаваемые вопросы</h2>
+				<div class="wrapper_service_questions">
+					<div class="block_questions_item">
+						<h4 class="service_item_title service_item_title_questions">Сколько стоит выезд IT-инженера?</h4>
+						<p class="service_item_text">Стоимость разового выезда начинается от 5 000 рублей и зависит от объема работ и срочности. При абонентском обслуживании выезда входят в стоимость пакета.</p>
+					</div>
+					<div class="block_questions_item">
+						<h4 class="service_item_title service_item_title_questions">Как быстро приедет инженер?</h4>
+						<p class="service_item_text">При срочном выезде в Москве и ближайшем Подмосковье - в течении 2-4 часов. В отдаленные районы МО - до 6 часов.</p>
+					</div>
+					<div class="block_questions_item">
+						<h4 class="service_item_title service_item_title_questions">Какие проблемы решает выездной инженер?</h4>
+						<p class="service_item_text">Диагностика и ремонт оборудования, настройка компьютеров и серверов, решение проблем с сетью, установка ПО, настройка периферии и другое.</p>
+					</div>
+					<div class="block_questions_item">
+						<h4 class="service_item_title service_item_title_questions">Работаете ли вы с юридическими лицами?</h4>
+						<p class="service_item_text">Да, мы работаем по договору с юридическими лицами, предоставляем все закрывающие документы для бухгалтерии.</p>
+					</div>
+					<div class="block_questions_item block_questions_withoutborder">
+						<h4 class="service_item_title service_item_title_questions">Можно ли заказать выезд в нерабочее время?</h4>
+						<p class="service_item_text">Да, мы предоставляем услуги выезда IT-инженера в выходные и праздничные дня, а также в ночное время по отдельному тарифу.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="form_second">
@@ -130,19 +361,5 @@
 			<p class="footer_copy">&copy;2023 LAN8. Все права защищены.</p>
 		</div>
 	</footer>
-	<script>
-			const menuBtn = document.querySelector('.menu_btn');
-			const menuBtnIcon = document.querySelector('.menu_btn i');
-			const downMenu = document.querySelector('.dropdown_menu');
-
-			menuBtn.onclick = function () {
-				downMenu.classList.toggle('open');
-
-				const isOpen = downMenu.classList.contains('open')
-				menuBtnIcon.classList = isOpen ?
-				'fa-solid fa-xmark' :
-				'fa-solid fa-bars'
-		}
-	</script>
 </body>
 </html>

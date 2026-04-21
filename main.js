@@ -12,6 +12,41 @@ menuBtn.onclick = function () {
 }
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.input_range');
+
+  sliders.forEach(slider => {
+    const wrapper = slider.closest('.wrapper_range');
+    const tooltip = wrapper.querySelector('.range_tooltip');
+
+    const THUMB_WIDTH = 20; 
+
+    function update() {
+      const min = +slider.min;
+      const max = +slider.max;
+      const val = +slider.value;
+
+      const trackWidth = slider.offsetWidth;
+      const usableWidth = trackWidth - THUMB_WIDTH;
+      
+      const percent = ((val - min) / (max - min)) * 100;
+
+      const thumbPosition = (percent / 100) * usableWidth + (THUMB_WIDTH / 2);
+
+      tooltip.style.left = `${thumbPosition}px`;
+      tooltip.textContent = val;
+    }
+
+    slider.addEventListener('input', update);
+    slider.addEventListener('pointerdown', () => wrapper.classList.add('dragging'));
+    window.addEventListener('pointerup', () => wrapper.classList.remove('dragging'));
+    window.addEventListener('resize', update);
+
+    update();
+  });
+});
+
 const input = document.querySelector("#phone");
 const iti = window.intlTelInput(input, {
 preferredCountries: ["ru", "us", "gb"],
