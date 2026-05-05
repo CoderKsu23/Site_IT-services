@@ -12,7 +12,6 @@ menuBtn.onclick = function () {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll('.input_range');
 
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const val = +slider.value;
 
       const trackWidth = slider.offsetWidth;
-      const usableWidth = trackWidth - THUMB_WIDTH;
+      const usableWidth = Math.max(0, trackWidth - THUMB_WIDTH);
       
       const percent = ((val - min) / (max - min)) * 100;
 
@@ -46,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   });
 });
+
+
 
 const input = document.querySelector("#phone");
 const iti = window.intlTelInput(input, {

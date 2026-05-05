@@ -598,7 +598,7 @@ a:hover {
     font-size: 11px;
 }
 .service_order_btn {
-    width: 140px;
+    width: 180px;
     height: 40px;
     background-color: #fff ;
     color: #74c1b5;
@@ -708,6 +708,13 @@ input[type="range"] {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
+}
+.change_level_range {
+    color: #74c1b5;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: start;
+    margin-top: 10px;
 }
 .service_calculat_items {
     display: flex;

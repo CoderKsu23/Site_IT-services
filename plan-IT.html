@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<script src="main.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
-    <title>Выезд IT-инженера на объект</title>
+    <title>План IT (ИТ)-проекта</title>
 </head>
 <body>
    <header class="header">
@@ -42,6 +44,114 @@
 		</div>
 	</header>
 	<main>
+		<section class="service_header">
+			<div class="container">
+				<div class="service_header_block">
+					<p class="part_service">Услуга</p>
+					<h2 class="service_header_title">План IT (ИТ)-проекта</h2>
+					<p class="serservice_header_text">Проффессиональное планрование IT-проектов любой сложности. Разработка комплексного плана IT проета с учетом всех требований, сроков и бюджетных ограничений. Гарантируем качественное планирование IT проекта для достижения поставленных бизнес-целей.</p>
+					<button class="btn service_calculat_btn">Рассчитать стоимость</button>
+					<button class="btn service_order_btn">Заказать консультацию</button>
+				</div>
+			</div>
+		</section>
+		<section class="service_description">
+			<div class="container">
+				<div class="block_service_description">
+					<div class="service_description_text">
+						<h2 class="service_description_title">Планирование IT проекта: специализация и этапы работы</h2>
+						<p><b>Специализация: </b>разработка комплексных планов IT проектов для бизнеса различного масштаба - от стартапов до корпоративных решений.</p>
+						<p><b>Принцип работы: </b>системный подход к планированию IT проекта, включающий анализ требований, оценку рисков, планирование ресурсов и формирование дорожной карты.</p>
+						<p><b>Этапы разработки плана IT проекта:</b></p>
+						<ol class="service_description_list">
+							<li>Сбор и анализ бизнес-требований</li>
+							<li>Формирование технического задания</li>
+							<li>Создание WBS-структуры работ</li>
+							<li>Оценка трудозатрат и сроков</li>
+							<li>Планирование ресурсов и бюджета</li>
+							<li>Определение контрольных точек и метрик</li>
+						</ol>
+						<p>Наше планирование IT проекта обеспечивает четкое понимание объема работ, сроков реализации и необходимых ресурсов для успешного выполнения проекта.</p>
+					</div>
+					<div class="service_description_img">
+						<img class="service_description_img_item" src="img/image-for-service.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="service_calculat">
+			<div class="container">
+				<div class="block_service_calculat">
+					<h2 class="service_calculat_title">Рассчитайте стоимость разработки IT проекта</h2>
+					<div class="wrapper_range">
+						<label class="label_range" for="difficulty">Сложность проекта:</label>
+						<div class="range_tooltip"></div>
+						<input class="input_range" type="range" id="difficulty" name="difficulty" min="1" max="3" value="2"/>
+						<div class="wrapper_numbers_range">
+							<p class="level_range_text">Простой</p>
+							<p class="level_range_text">Средний</p>
+							<p class="level_range_text">Сложный</p>
+						</div>
+						<p class="change_level_range">Средняя сложность</p>
+					</div>
+					<div class="wrapper_range">
+						<label class="label_range" for="period">Срок реализации проекта:</label>
+						<div class="range_tooltip"></div>
+						<input class="input_range" type="range" id="period" name="period" min="1" max="24" value="6"/>
+						<div class="wrapper_numbers_range">
+							<p class="level_range_text">1 месяц</p>
+							<p class="level_range_text">12 месяцев</p>
+							<p class="level_range_text">24+ месяцев</p>
+						</div>
+						<p class="change_level_range">6 месяцев</p>
+					</div>
+					<div class="wrapper_range">
+						<label class="label_range" for="integrations">Количество интеграций с внешними системами:</label>
+						<div class="range_tooltip"></div>
+						<input class="input_range" type="range" id="integrations" name="integrations" min="0" max="10" value="2"/>
+						<div class="wrapper_numbers_range">
+							<p class="level_range_text">0</p>
+							<p class="level_range_text">5</p>
+							<p class="level_range_text">10+</p>
+						</div>
+						<p class="change_level_range">2 интеграции</p>
+					</div>
+					<div class="service_calculat_items">
+						<div class="block_calculat_item">
+							<h4 class="calculat_item_title">Базовый план IT проекта</h4>
+							<p class="calculat_item_price">35 000 &#8381;</p>
+							<ul class="calculat_item_list">
+								<li class="calculat_item">ТЗ и WBS-структура</li>
+								<li class="calculat_item">Оценка трудозатрат</li>
+								<li class="calculat_item">Дорожная карта проекта</li>
+							</ul>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Заказать</button>
+							</div>
+						</div>
+						<div class="block_calculat_item calculat_items_white">
+							<h4 class="calculat_item_title">Расширенный план IT-проекта</h4>
+							<p class="calculat_item_price">от 57 000 &#8381;</p>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Выбрать</button>
+							</div>
+						</div>
+						<div class="block_calculat_item">
+							<h4 class="calculat_item_title">Комплексное планирование</h4>
+							<p class="calculat_item_price">от 90 000 &#8381;</p>
+							<ul class="calculat_item_list">
+								<li class="calculat_item">Полное сопровождение</li>
+								<li class="calculat_item">Регулярные корректировки</li>
+								<li class="calculat_item">Стратегическое планирование</li>
+							</ul>
+							<div class="block_calculat_items_btn">
+							<button type="button" class="btn calculat_items_btn">Обсудить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="form_second">
 			<div class="container">
 				<div class="container_form_second">
@@ -90,19 +200,5 @@
 			<p class="footer_copy">&copy;2023 LAN8. Все права защищены.</p>
 		</div>
 	</footer>
-	<script>
-			const menuBtn = document.querySelector('.menu_btn');
-			const menuBtnIcon = document.querySelector('.menu_btn i');
-			const downMenu = document.querySelector('.dropdown_menu');
-
-			menuBtn.onclick = function () {
-				downMenu.classList.toggle('open');
-
-				const isOpen = downMenu.classList.contains('open')
-				menuBtnIcon.classList = isOpen ?
-				'fa-solid fa-xmark' :
-				'fa-solid fa-bars'
-		}
-		</script>
 </body>
 </html>
