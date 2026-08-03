@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 	<script src="main.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
     <title>План IT (ИТ)-проекта</title>
@@ -50,8 +52,8 @@
 					<p class="part_service">Услуга</p>
 					<h2 class="service_header_title">План IT (ИТ)-проекта</h2>
 					<p class="service_header_text">Проффессиональное планрование IT-проектов любой сложности. Разработка комплексного плана IT проета с учетом всех требований, сроков и бюджетных ограничений. Гарантируем качественное планирование IT проекта для достижения поставленных бизнес-целей.</p>
-					<button class="btn service_calculat_btn">Рассчитать стоимость</button>
-					<button class="btn service_order_btn">Заказать консультацию</button>
+					<button class="btn service_calculat_btn scroll-to" data-target="calculator">Рассчитать стоимость</button>
+					<button class="btn service_order_btn open-modal-btn" type="button" data-modal-target="modal">Заказать консультацию</button>
 				</div>
 			</div>
 		</section>
@@ -79,7 +81,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="service_calculat">
+		<section class="service_calculat" id="calculator">
 			<div class="container">
 				<div class="block_service_calculat">
 					<h2 class="service_calculat_title">Рассчитайте стоимость разработки IT проекта</h2>
@@ -333,12 +335,12 @@
 					<h2 class="form_second_title">Нужна поддержка или консультация по IT-инфраструктуре?</h2>
 					<p class="form_second_text">Оставте заявку, и наш специалист свяжется с вами в течении 15 минут для согласования деталей выезда IT-инженера.</p>
 					<form action="" method="get">
-						<label class="form_label" for="username">Имя</label>
-						<input class="form_input" type="text" id="username">
-						<label class="form_label" for="phone">Телефон</label>
-						<input class="form_input" type="text" id="phone">
-						<label class="form_label" for="task">Кратко опишите задачу</label>
-						<textarea class="form_textarea" id="task"></textarea>
+						<label class="form__main form_label" for="username">Имя</label>
+						<input class="form__main form_input" type="text" id="username">
+						<label class="form__main form_label" for="phone">Телефон</label>
+						<input class="form__main form_input" type="text" id="phone">
+						<label class="form__main form_label" for="task">Кратко опишите задачу</label>
+						<textarea class="form__main form_textarea" id="task"></textarea>
 						<input class="btn input_btn_second" type="submit" value="Отправить заявку на выезд инженера">
 					</form>
 					<p class="form_text_second">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>

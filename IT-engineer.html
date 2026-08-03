@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 	<script src="main.js" defer></script>
 	<link rel="stylesheet" href="styles.css">
     <title>Выезд IT-инженера на объект</title>
@@ -49,9 +51,9 @@
 				<div class="service_header_block">
 					<p class="part_service">Услуга</p>
 					<h2 class="service_header_title">Выезд IT-инженера на объект</h2>
-					<p class="serservice_header_text">Оперативный выезд сервисного инженера технической поддержки для решения IT-проблем на вашем объекте в Москве и Московской области. Срочный выездной сервис от 2 часов.</p>
-					<button class="btn service_calculat_btn">Рассчитать стоимость</button>
-					<button class="btn service_order_btn">Заказать выезд</button>
+					<p class="service_header_text">Оперативный выезд сервисного инженера технической поддержки для решения IT-проблем на вашем объекте в Москве и Московской области. Срочный выездной сервис от 2 часов.</p>
+					<button class="btn service_calculat_btn scroll-to" data-target="calculator">Рассчитать стоимость</button>
+					<button class="btn service_order_btn open-modal-btn" type="button" data-modal-target="modal">Заказать выезд</button>
 				</div>
 			</div>
 		</section>
@@ -79,7 +81,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="service_calculat">
+		<section class="service_calculat" id="calculator">
 			<div class="container">
 				<div class="block_service_calculat">
 					<h2 class="service_calculat_title">Рассчитайте стоимость выезда IT-инженера</h2>
@@ -111,14 +113,14 @@
 								<li class="calculat_item">Отчет о работе</li>
 							</ul>
 							<div class="block_calculat_items_btn">
-							<button type="button" class="btn calculat_items_btn">Заказать</button>
+							<button type="button" class="btn calculat_items_btn open-modal-btn" type="button" data-modal-target="modal">Заказать</button>
 							</div>
 						</div>
 						<div class="block_calculat_item calculat_items_white">
 							<h4 class="calculat_item_title">Абонентское обслуживание</h4>
 							<p class="calculat_item_price">от 17 000 &#8381;/мес</p>
 							<div class="block_calculat_items_btn">
-							<button type="button" class="btn calculat_items_btn">Выбрать</button>
+							<button type="button" class="btn calculat_items_btn open-modal-btn" type="button" data-modal-target="modal">Выбрать</button>
 							</div>
 						</div>
 						<div class="block_calculat_item">
@@ -130,7 +132,7 @@
 								<li class="calculat_item">Стратегическое планирование</li>
 							</ul>
 							<div class="block_calculat_items_btn">
-							<button type="button" class="btn calculat_items_btn">Обсудить</button>
+							<button type="button" class="btn calculat_items_btn open-modal-btn" type="button" data-modal-target="modal">Обсудить</button>
 							</div>
 						</div>
 					</div>
@@ -319,12 +321,12 @@
 					<h2 class="form_second_title">Нужна поддержка или консультация по IT-инфраструктуре?</h2>
 					<p class="form_second_text">Оставте заявку, и наш специалист свяжется с вами в течении 15 минут для согласования деталей выезда IT-инженера.</p>
 					<form action="" method="get">
-						<label class="form_label" for="username">Имя</label>
-						<input class="form_input" type="text" id="username">
-						<label class="form_label" for="phone">Телефон</label>
-						<input class="form_input" type="text" id="phone">
-						<label class="form_label" for="task">Кратко опишите задачу</label>
-						<textarea class="form_textarea" id="task"></textarea>
+						<label class="form__main form_label" for="username">Имя</label>
+						<input class="form__main form_input" type="text" id="username">
+						<label class="form__main form_label" for="phone">Телефон</label>
+						<input class="form__main form_input" type="text" id="phone">
+						<label class="form__main form_label" for="task">Кратко опишите задачу</label>
+						<textarea class="form__main form_textarea auto-resize" id="task" rows="3"></textarea>
 						<input class="btn input_btn_second" type="submit" value="Отправить заявку на выезд инженера">
 					</form>
 					<p class="form_text_second">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>

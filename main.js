@@ -86,9 +86,169 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //Для телефонных номеров в секции для заполнения заявки
-const input = document.querySelector("#phone");
-const iti = window.intlTelInput(input, {
-preferredCountries: ["ru", "us", "gb"],
-separateDialCode: true, 
-utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+function initAllPhoneInputs() {
+    const phoneInputs = document.querySelectorAll('.phone-input');
+
+    phoneInputs.forEach(input => {
+        if (!input.classList.contains('iti-applied')) {
+            
+            window.intlTelInput(input, {
+                preferredCountries: ["ru", "us", "gb"],
+                separateDialCode: true, 
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+            
+            input.classList.add('iti-applied');
+        }
+    });
+}
+
+
+// Для модального окна
+let scrollPosition = 0;
+
+function lockScroll() {
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+}
+function unlockScroll() {
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.paddingRight = '';
+    
+    window.scrollTo(0, scrollPosition);
+}
+
+async function loadGlobalModal() {
+    if (document.getElementById('modal')) return;
+
+    try {
+        const response = await fetch('modal.html');
+        const html = await response.text();
+        
+        document.body.insertAdjacentHTML('beforeend', html);
+        
+        initAllPhoneInputs();
+
+        initModalLogic();
+    } catch (error) {
+        console.error('Ошибка загрузки модального окна:', error);
+    }
+}
+
+function initModalLogic() {
+    const modal = document.getElementById('modal');
+    const form = document.getElementById('requestForm');
+
+    document.querySelectorAll('.open-modal-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        const modalId = btn.getAttribute('data-modal-target');
+        const modal = document.getElementById(modalId);
+        
+        if (modal) {
+            lockScroll();
+            modal.showModal();
+        }
+        });   
+    });
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+        modal.close();
+        unlockScroll();
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.close();
+            unlockScroll();
+        }
+    });
+
+    modal.addEventListener('close', () => {
+        unlockScroll();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initAllPhoneInputs();
+    loadGlobalModal();
 });
+
+// Для плавного скролла к конкретной части сайта
+document.querySelectorAll('.scroll-to').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = button.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        
+        if (!targetElement) return;
+        
+        const header = document.querySelector('.header');
+        const offset = header ? header.offsetHeight + 20 : 20;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+        
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 800;
+        let startTime = null;
+        
+        function step(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            const ease = progress < 0.5 
+                ? 2 * progress * progress 
+                : -1 + (4 - 2 * progress) * progress;
+            
+            window.scrollTo(0, startPosition + distance * ease);
+            
+            if (elapsed < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+        
+        requestAnimationFrame(step);
+    });
+});
+
+// Функция автоматического расширения формы для заполнения
+function autoResizeTextarea(textarea) {
+
+    textarea.style.height = 'auto';
+    
+    const newHeight = textarea.scrollHeight;
+    const maxHeight = parseInt(getComputedStyle(textarea).maxHeight);
+    
+    if (newHeight <= maxHeight) {
+        textarea.style.height = newHeight + 'px';
+        textarea.classList.remove('overflow');
+    } else {
+        textarea.style.height = maxHeight + 'px';
+        textarea.classList.add('overflow');
+    }
+}
+document.querySelectorAll('.auto-resize').forEach(textarea => {
+    textarea.addEventListener('input', () => {
+        autoResizeTextarea(textarea);
+    });
+
+    if (textarea.value) {
+        autoResizeTextarea(textarea);
+    }
+});
+

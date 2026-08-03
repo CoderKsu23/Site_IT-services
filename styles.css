@@ -138,6 +138,60 @@ a:hover {
     border-left: 3px #74c1b5 solid;
     line-height: 24px;
 }
+/*Modal*/
+#modal {
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 610px;
+    width: 90%;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    top: 20%;
+    right: 0;
+    position: relative;
+    overflow: visible;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+dialog .input_subject {
+    width: 100%;
+}
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.modal__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+.submit-btn {
+    padding: 16px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.modal__text {
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 10px;
+}
 /* Nav bar*/
 .header {
     position: relative;
@@ -497,6 +551,11 @@ a:hover {
     text-align: center;
     padding: 30px 0;
 }
+.form__main {
+    padding: 5px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
 .form_label {
     display: flex;
     flex-direction: column;
@@ -510,16 +569,36 @@ a:hover {
     border: 1px solid #3d3c3c;
     border-radius: 5px;
     background-color: #29292c;
-    color: #fff;
     margin-bottom: 16px;
 }
 .form_textarea {
     width: 100%;
-    height: 60px;
+    min-height: 60px;
+    max-height: 200px;
     margin-bottom: 22px;
+    resize: none;
+    overflow: hidden;
     border: 1px solid #3d3c3c;
     border-radius: 10px;
     background-color: #29292c;
+}
+.auto-resize.overflow {
+    overflow-y: auto;
+}
+.auto-resize::-webkit-scrollbar {
+    width: 6px;
+}
+.auto-resize::-webkit-scrollbar-track {
+    background: #29292c;
+    border-radius: 5px;
+}
+.auto-resize::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+    cursor: default;
+}
+.auto-resize::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }
 .input_btn_second {
     display: block;
@@ -1341,6 +1420,9 @@ input[type="range"] {
     }
 }
 @media screen and (max-width: 400px ) {
+    .modal__title {
+        font-size: 28px;
+    }
     .header_part {
         margin-top: 50px;
     }
